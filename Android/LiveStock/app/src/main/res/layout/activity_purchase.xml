@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/imgs"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".purchase">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Purchase"
+        android:textColor="#ffff"
+
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="163dp" />
+
+    <EditText
+        android:id="@+id/amount"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+       android:textColorHint="#ffff"
+        android:textColor="#ffff"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Amount" />
+
+    <EditText
+        android:id="@+id/quantity"
+        android:layout_width="300dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:textColor="#ffff"
+        android:textColorHint="@color/white"
+        android:ems="10"
+        android:digits="0123456789"
+        android:inputType="textPersonName"
+        android:hint="Quantity" />
+
+    <EditText
+        android:id="@+id/total"
+        android:layout_width="300dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:textColor="#ffff"
+        android:textColorHint="@color/white"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="total" />
+
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+
+
+
+</LinearLayout>

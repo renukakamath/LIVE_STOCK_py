@@ -1,0 +1,61 @@
+{% include'admin_header.html' %}
+
+   
+<form method="post" enctype="multipart/form-data">
+		<center>
+		<br><br><br><br>
+						<h2>Send Shortage Request</h2>
+				<table class="table" style="width: 600px;color: black">
+		<tr>
+			<th>Supplier</th>
+			<td>
+				<select name="supplier" required="" class="form-control">
+					{% for row in data['supplier'] %}
+					<option value="{{row['supplier_id']}}">{{row['fname']}} {{row['lname']}}</option>
+					{% endfor %}
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<th>Products</th>
+			<td>
+				<select name="pro" required="" class="form-control">
+					{% for row in data['pro'] %}
+					<option value="{{row['feed_id']}}">{{row['f_name']}}</option>
+					{% endfor %}
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center"><input type="submit" class="btn btn-success" name="submit" value="SEND"></td>
+		</tr>
+
+	</table>
+						   
+			
+
+
+  
+			<br>
+			<center>
+			<h2>View Request</h2>
+			<table class="table" style="width: 500px">
+				<tr>
+					<th style="color: black">Sl.no</th>
+					<th style="color: black">Supplier</th>
+					<th style="color: black">Product</th>
+
+				</tr>
+				{% for row in data['don'] %}
+				<tr>
+					<td>{{loop.index}}</td>
+					<td>{{row['fname']}} {{row['lname']}}</td>
+					<td>{{row['f_name']}}</td>
+					<td><a class="btn btn-info" href="?action=delete&id={{row['request_id']}}">Delete</a></td>
+				</tr>
+				{% endfor %}
+			</table>
+
+		</center>
+	</form>
+{% include'footer.html' %}

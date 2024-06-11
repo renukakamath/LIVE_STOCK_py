@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/imgs"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Makepayment">
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Make payment"
+        android:textColor="#ffff"
+        android:textSize="30dp"
+        tools:layout_editor_absoluteX="133dp"
+        tools:layout_editor_absoluteY="187dp" />
+
+    <EditText
+        android:id="@+id/cardnum"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="#ffff"
+        android:textColor="#ffff"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:inputType="textPersonName"
+        android:hint="Card Number" />
+
+    <EditText
+        android:id="@+id/Cvv"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="#ffff"
+        android:textColor="#ffff"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:inputType="textPersonName"
+        android:hint="Cvv"  />
+
+    <EditText
+        android:id="@+id/amount"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="#ffff"
+        android:textColor="#ffff"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:inputType="textPersonName"
+        android:hint="Amount" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+
+
+
+</LinearLayout>

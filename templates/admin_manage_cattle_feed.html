@@ -1,0 +1,84 @@
+{% include'admin_header.html' %}
+
+   
+<form method="post" enctype="multipart/form-data">
+		<center>
+		{% if data['dir'] %}
+		<br><br><br><br>
+							<h2>Update Product Details</h2>
+			<table class="table" style="width: 600px;">
+				<tr>
+					<th>Name</th>
+					<td><input type="text" name="name" value="{{data['dir'][0]['f_name']}}" required pattern="[a-zA-Z\s]{0,30}" title="enter alphabets only" class="form-control"></td>
+				</tr>
+				<tr>
+					<th>Price</th>
+					<td><input type="text" name="price" value="{{data['dir'][0]['price']}}" required   class="form-control"></td>
+				</tr>
+				<tr>
+					<th>Quantity</th>
+					<td><input type="text" name="qty" value="{{data['dir'][0]['quantity']}}" required  class="form-control"></td>
+				</tr>
+
+				<tr>
+					<td colspan="2" align="center"><input type="submit" name="update" value="UPDATE" class="btn btn-info btn-sm"></td>
+				</tr>
+			</table>
+					
+		{% else %}
+		<br><br><br><br>
+						<h2>Manage Cattle Products</h2>
+			<table class="table" style="width: 600px;">
+				<tr>
+					<th>Name</th>
+					<td><input type="text" name="name"  required pattern="[a-zA-Z\s]{0,30}" title="enter alphabets only" class="form-control"></td>
+				</tr>
+				<tr>
+					<th>Image</th>
+					<td><input type="file" name="img"  required class="form-control"></td>
+				</tr>
+				<tr>
+					<th>price</th>
+					<td><input type="text" name="price"  required class="form-control"></td>
+				</tr>
+				<tr>
+					<th>Quantity</th>
+					<td><input type="text" name="qty" required  class="form-control"></td>
+				</tr>
+				
+				<tr>
+					<td colspan="2" align="center"><input type="submit" name="manage" value="Manage" class="btn btn-info"></td>
+				</tr>
+			</table>
+						   
+			
+		{% endif %}
+
+  
+			<br>
+			<center>
+			<h2>Cattle Products</h2>
+			<table class="table" style="width: 800px">
+				<tr>
+					<th style="color: black">Sl.no</th>
+					<th style="color: black">Name</th>
+					<th style="color: black">Product</th>
+					<th style="color: black">Quantity</th>
+					<th style="color: black">Image</th>
+				</tr>
+				{% for row in data['don'] %}
+				<tr>
+					<td>{{loop.index}}</td>
+					<td>{{row['f_name']}}</td>
+					<td>{{row['product']}}</td>
+					<td>{{row['quantity']}}</td>
+					<td><a href="/{{row['image']}}"><img src="/{{row['image']}}" height="100" width="100"></a></td>
+					<td><a class="btn btn-info" href="?action=delete&id={{row['feed_id']}}">Delete</a></td>
+					<td><a class="btn btn-success" href="?action=update&id={{row['feed_id']}}">Update</a></td>
+				</tr>
+				{% endfor %}
+			</table>
+
+		</center>
+	</form>
+{% include'footer.html' %}

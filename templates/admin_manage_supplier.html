@@ -1,0 +1,105 @@
+{% include'admin_header.html' %}
+
+   
+<form method="post" enctype="multipart/form-data">
+		<center>
+		{% if data['dir'] %}
+		<br><br><br><br>
+							<h2>Update Supplier Details</h2>
+			<table class="table" style="width: 600px;">
+				<tr>
+					<th>First Name</th>
+					<td><input type="text" name="fn" value="{{data['dir'][0]['fname']}}" required pattern="[a-zA-Z\s]{0,30}" title="enter alphabets only" class="form-control"></td>
+				</tr>
+				<tr>
+					<th>Last Name</th>
+					<td><input type="text" name="ln" value="{{data['dir'][0]['lname']}}" required pattern="[a-zA-Z\s]{0,30}" title="enter alphabets only" class="form-control"></td>
+				</tr>
+				<tr>
+					<th>Place</th>
+					<td><input type="text" value="{{data['dir'][0]['place']}}" required class="form-control" name="pl"></td>
+	   			</tr>
+				 <tr>
+	 				<th>Phone</th>
+	 				<td><input type="number" value="{{data['dir'][0]['phone']}}" required="" class="form-control" name="ph"></td>
+		 		</tr>
+				<tr>
+					<th>Email</th>
+					<td><input type="email" value="{{data['dir'][0]['email']}}" required="" class="form-control" name="em"></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center"><input type="submit" name="update" value="UPDATE" class="btn btn-info btn-sm"></td>
+				</tr>
+			</table>
+					
+		{% else %}
+		<br><br><br><br>
+						<h2>Manage Supplier</h2>
+				<table class="table" style="width: 600px;color: black">
+		<tr>
+			<th>First Name</th>
+			<td><input type="text" required="" class="form-control" name="fn"></td>
+		</tr>
+		<tr>
+			<th>Last Name</th>
+			<td><input type="text" required="" class="form-control" name="ln"></td>
+		</tr>
+		<tr>
+			<th>Place</th>
+			<td><input type="text" required="" class="form-control" name="pl"></td>
+	   	</tr>
+		 <tr>
+	 		<th>Phone</th>
+	 		<td><input type="number" required="" class="form-control" name="ph"></td>
+		 </tr>
+		<tr>
+			<th>Email</th>
+			<td><input type="email" required="" class="form-control" name="em"></td>
+		</tr>
+		<tr>
+			<th>username</th>
+			<td><input type="text" required="" class="form-control" name="uname"></td>
+		</tr>
+		<tr>
+			<th>password</th>
+			<td><input type="password" required="" class="form-control" name="pwd"></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center"><input type="submit" class="btn btn-success" name="submit" value="REGISTER"></td>
+		</tr>
+
+	</table>
+						   
+			
+		{% endif %}
+
+  
+			<br>
+			<center>
+			<h2>Supplier</h2>
+			<table class="table" style="width: 800px">
+				<tr>
+					<th style="color: black">Sl.no</th>
+					<th style="color: black">First Name</th>
+					<th style="color: black">Last Name</th>
+					<th style="color: black">Place</th>
+					<th style="color: black">Phone</th>
+					<th style="color: black">Email</th>
+				</tr>
+				{% for row in data['don'] %}
+				<tr>
+					<td>{{loop.index}}</td>
+					<td>{{row['fname']}}</td>
+					<td>{{row['lname']}}</td>
+					<td>{{row['place']}}</td>
+					<td>{{row['phone']}}</td>
+					<td>{{row['email']}}</td>
+					<td><a class="btn btn-info" href="?action=delete&id={{row['login_id']}}">Delete</a></td>
+					<td><a class="btn btn-success" href="?action=update&id={{row['login_id']}}">Update</a></td>
+				</tr>
+				{% endfor %}
+			</table>
+
+		</center>
+	</form>
+{% include'footer.html' %}

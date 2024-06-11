@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/imgs"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Userhome">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome To user Home"
+        android:textColor="@color/white"
+
+        android:textSize="30dp"
+        android:textStyle="italic"
+        android:layout_marginTop="20dp"
+        tools:layout_editor_absoluteX="154dp"
+        tools:layout_editor_absoluteY="241dp" />
+
+    <Button
+        android:id="@+id/viewfeed"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="View FeedProducts" />
+
+    <Button
+        android:id="@+id/viewpurchase"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="view purchase" />
+
+    <Button
+        android:id="@+id/sendcomplaint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
+        android:text="sendcomplaint"
+        />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="logout" />
+
+
+</LinearLayout>

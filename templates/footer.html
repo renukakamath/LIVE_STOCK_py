@@ -1,0 +1,82 @@
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul class="flashes">
+    {% for message in messages %}
+    <script type="text/javascript">alert("{{message}}")</script>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+
+ <section class="w3l-footer-29-main">
+  <div class="footer-29 py-5">
+    <div class="container py-lg-4">
+    <div class="row footer-top-29">
+      <div class="col-lg-5 col-md-6 col-sm-12 footer-list-29 footer-1">
+        <h2><a href="index.html" class=""><span class="fa fa-paw mr-2" aria-hidden="true"></span> Pet Sitter</a></h2>
+        <p>Adipisicing elit. Lauda ntium, archi tecto iure Lorem incidunt iosam qui quo moll itia veniam recus andae archi tecto earum suscipit exce pturi dicta nemo quam.</p>
+  </div>
+      <div class="col-lg-3 col-md-6 col-sm-5 footer-list-29 footer-3">
+        <h6 class="footer-title-29">Get in Touch</h6>
+    
+        <div class="column2">
+                <div class="href1"><span>E-mail:</span><a href="mailto:mail@company.com">mail@company.com</a>
+                </div>
+                <div class="href2"><span>Phone:</span><a href="tel:+(12)-00 222 00008">+(12)-00 222 00008</a>
+                </div>
+                <div>
+                  <p class="contact-para">California, 75 West Rock,
+                    Maple Building.</p>
+                </div>
+              </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-7 footer-list-29 footer-4">
+      <h6 class="footer-title-29">Newsletter </h6>
+      <p>Enter your email and receive the latest news from us.
+       We'll never share your email address</p>
+  
+      <form action="#" class="subscribe" method="post">
+        <input type="email" name="email" placeholder="Your Email Address" required="">
+        <button><span class="fa fa-envelope-o"></span></button>
+      </form>
+      </div>
+    </div>
+
+    </div>
+  </div>
+  <div class="bottom-copies text-center">
+    <div class="container">
+    <p class="copy-footer-29">© 2020 Pet Sitter. All rights reserved | Designed by <a href="https://w3layouts.com">W3layouts</a></p>
+  </div>
+  </div>
+  </section>
+
+
+<!-- move top -->
+<button onclick="topFunction()" id="movetop" title="Go to top">
+  <span class="fa fa-eject"></span>
+</button>
+<script>
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function () {
+    scrollFunction()
+  };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("movetop").style.display = "block";
+    } else {
+      document.getElementById("movetop").style.display = "none";
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+<!-- /move top -->
+</body>
+
+</html>
